@@ -10,6 +10,12 @@ package fuelpurchase;
  *
  * @author 041209329
  */
+package fuelpurchase;
+
+/**
+ *
+ * @author 041209329
+ */
 public class Vehicle {
 
    
@@ -53,11 +59,12 @@ public class Vehicle {
 	 */
 	public void printDetails() {
 		
-                System.out.println("Manufacturer: " + manufacturer);
-		System.out.println("Car Model: " + model);
-		System.out.println("Year of Production: " + makeYear);
-		System.out.println("Distance Travelled in Kilometers: " + journey.getKilometers());
-		System.out.println("Services Undergone: " + journey.getTotalServices());
+                System.out.println("Manufacturer: " + (" Manufactured by ") + manufacturer);
+		System.out.println("Car Model: " + (" Model ") + model);
+		System.out.println("Year of Production: " + (" Year ") + makeYear);
+                System.out.println("The Total Distance Travelled in Kilometers: " + journey.getKilometers() + " Kilometers ");
+		System.out.println("Services Undergone: " + journey.getTotalServices() + " Services was Undergone ");
+                System.out.println("This vehicle achieve a fuel consumption of: " + journey.getFuel() + " Litres per 100km ");
 	}
 
 	/**
@@ -66,7 +73,8 @@ public class Vehicle {
 	 * @param distance
 	 *            distance of kilometers traveled
 	 */
-	public void addKilometers(double distance) {
+	
+        public void addKilometers(double distance) {
 		journey.addKilometers(distance);
 	}
 
